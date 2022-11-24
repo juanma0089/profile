@@ -1,0 +1,33 @@
+body{
+    height: 100vw;
+}
+
+#yo{
+    background-image: url(../img/developer-coding-in-php.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+  
+}
+.sombreado{
+      background-color: rgba(38, 43, 51, 0.801);
+
+}
+/* imagen circular */
+#sobreMi{
+    background-color: rgb(40, 46, 54);
+}
+
+#dPersonales{
+    background-color: rgb(40, 46, 54);
+}
+
+
+@media screen and (max-width:767px) {
+    #yo{
+        background-image: url(../img/developer-coding-in-php\ -\ copia.jpg);
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+}
+}
