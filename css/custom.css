@@ -3,10 +3,11 @@ body{
     background-image: url(../img/feather-g7cdbc8b3c_1920.jpg);
     background-position: center center;
     background-attachment: fixed;
+
    
 }
 
-#yo{
+#miPerfil{
     background-image: url(../img/developer-coding-in-php.jpg);
     background-size: cover;
     background-position: center top;
@@ -52,6 +53,23 @@ body{margin-top:20px;}
     flex-direction: column;
     position: relative;
     margin: 1rem
+}
+/* movimiento al inicio text/foto */
+.noMostrar{
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.mostrar{
+    transition: 3.5s;
+    opacity: 1;
+    
+}
+
+@media screen and (max-width:1399px) {
+    .icons{
+        padding-left: 0px;
+    } 
 }
 
 @media (min-width:768px) {

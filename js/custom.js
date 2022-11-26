@@ -20,3 +20,28 @@ function SlideRight() {
       document.getElementById("press").style.color = "#000";
     }
   }
+
+  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+  const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+  //! movimiento al cargar
+
+  function moverTexto(){
+
+    let idTexto = document.getElementById('presentacion');
+    let idFoto = document.getElementById('foto');
+ 
+
+    if(idTexto.classList.contains('noMostrar')){
+
+      idTexto.classList.remove('noMostrar');
+      idTexto.classList.add('mostrar');
+
+    }
+    if(idFoto.classList.contains('noMostrar')){
+
+      idFoto.classList.remove('noMostrar');
+      idFoto.classList.add('mostrar');
+
+    }
+  }
