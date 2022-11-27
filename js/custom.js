@@ -21,10 +21,10 @@ function SlideRight() {
     }
   }
 
-  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-  const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+  const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
 
-  //! movimiento al cargar
+  //! evento al cargar
 
   function moverTexto(){
 
@@ -44,4 +44,68 @@ function SlideRight() {
       idFoto.classList.add('mostrar');
 
     }
+  }
+
+  //! evento al hacer scroll 
+
+  // esta funcion comprueba si un elemento esta visible en pantalla
+  function isVisible(elm) {
+    let rect = elm.getBoundingClientRect();
+    let viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight)/1.3;
+    return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+  }
+  
+  // cuando se carga la página...
+  window.addEventListener('DOMContentLoaded', (ev0) => {
+          // asignamos un evento scroll...
+    window.addEventListener('scroll', (ev1) => {
+                  // y a todos los elementos con la clase paused...
+      document.querySelectorAll(".paused").forEach(elm => {
+        if (isVisible(elm)){ // que sean visibles...
+          elm.classList.remove("paused"); // les quitamos la clase paused
+        }
+      })
+    });
+  });  
+
+  // ! evento onmouseover + onmouseout letras e iconos intereses
+
+  function colorChange(x){
+
+    if(x.classList.contains('text-success')){
+      
+      x.classList.remove('text-success');
+      x.classList.add('text-light');
+    }
+
+  }
+
+  function colorReset(x){
+
+    if(x.classList.contains('text-light')){
+      
+      x.classList.remove('text-light');
+      x.classList.add('text-success');
+    }
+
+  }
+
+  function colorResetText(x){
+
+    if(x.classList.contains('text-success')){
+      
+      x.classList.remove('text-success');
+      x.classList.add('text-light');
+    }
+
+  }
+
+  function colorChangeText(x){
+
+    if(x.classList.contains('text-light')){
+      
+      x.classList.remove('text-light');
+      x.classList.add('text-success');
+    }
+
   }

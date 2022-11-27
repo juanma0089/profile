@@ -9,18 +9,17 @@
         <link href="./css/custom.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
         <script defer src="./js/bootstrap.bundle.js"></script>
-        <script defer src="./js/bootstrap.bundle.min.js"></script>
         <script defer src="./js/custom.js"></script>
-      </head>
+    </head>
 <body class="mt-0" onload="moverTexto()"  >
     <!--container menu inicio -->
-    <div class="container bg-dark sticky-top mt-0">
-        <header class="row " id="inicio">
+    <div class="container bg-dark mt-0">
+        <header class="row" id="inicio">
             <nav class="navbar navbar-expand-lg  text-light" class="" id="menu">
-                <button class="navbar-toggler ms-2 imagenBoton" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler ms-2 imagenBoton text-bg-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon "></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo01">
                     <ul class="navbar-nav mx-3">
@@ -98,10 +97,11 @@
     
     <section class="container  align-items-center align-content-center justify-content-center p-0" id="miPerfil">
         <div class="sombreado">
-        <div class="row vh-50 text-center m-0 col-12 align-items-center p-md-5"  >
+        <div class="row vh-50 text-center m-0 col-12 align-items-center p-md-5 contenedorFoto ">
             <div class="col-12 col-md-6 pt-5 pt-md-0 text-light mb-5 mt-md-5 noMostrar " id="presentacion">
                 <h1>Hola, Soy Juanma</h1>
                 <h3>Futuro desarrollador web</h3>
+                <h2>Full stack</h2>
             </div>
             <div class="col-12 col-md-6 pt-5 pt-md-0 mx-0 mb-5 mt-md-5 fondo align-items-center transform_right noMostrar" id="foto">
                 <img class="col-5 col-md-5  img-fluid" id="fotoPerfil" src="./img/playa.JPEG" alt="fotoperfil">
@@ -116,7 +116,7 @@
     <section class="container align-items-center text-light" id="sobreMi">
         <div class="row  vh-50 text-center">
             
-            <div class="col-10 col-md-6 mx-auto mt-4 mb-4" >
+            <div class="col-10 col-md-6 mx-auto mt-4 mb-4 noMostrar" >
                 <h3>Sobre mi</h3>
                 <p class=" mt-1 " > Soy una persona emprendedora, muy resolutiva, que adora los retos y 
                     no se rinde fácilmente. Muy detallista, autodidacta cada día, nunca dejo de aprender 
@@ -130,25 +130,25 @@
     <!-- Fin sección sobre mi -->
   
     <!-- Datos personales -->
-    <section class="container  align-items-center text-light p-0" id="dPersonales">
-        <div class="row col-12 mx-0 p-0 ">
-            <div class="col-12 col-md-6">
+    <section class="container  align-items-center p-0" id="dPersonales">
+        <div class="row col-12 mx-0 p-0 noMostrar">
+            <div class="col-12 col-md-6 text-light">
                 <h4 class="text-center ">Datos personales</h4>
                 <div id="tablaDatos" class="mx-0">
                     <table class="table table-borderless text-light ms-0 ms-md-5">
                         <tbody>
                           <tr>
-                            <th scope="row" class="text-end p-2"><h5 class="m-0"><span class="badge rounded-pill bg-success text-end">Nombre: </span></h5></th>
+                            <th scope="row" class="text-end p-2"><h5 class="m-0"><span class="badge rounded-pill bg-success text-end"></i><i class="bi bi-person-circle" style="font-size: 1rem;"></i> Nombre: </span></h5></th>
                             <td class="p-2"><span class="h6"> Juan Manuel Romalde Marín</span></td>
                             
                           </tr>
                           <tr>
-                            <th scope="row" class="text-end p-2"><h5 class="m-0"><span class="badge rounded-pill bg-success">Teléfono: </span></h5></th>
+                            <th scope="row" class="text-end p-2"><h5 class="m-0"><span class="badge rounded-pill bg-success"><i class="bi  bi-telephone" style="font-size: 1rem;"></i> Teléfono: </span></h5></th>
                             <td class="p-2"><span class="h6"> +34 679-67-31-93</span></td>
                             
                           </tr>
                           <tr>
-                            <th scope="row" class="text-end p-2 "><h5 class="m-0"><span class="badge rounded-pill bg-success">Email: </span></h5></th>
+                            <th scope="row" class="text-end p-2 "><h5 class="m-0"><span class="badge rounded-pill bg-success"><i class="bi bi-envelope-at"  style="font-size: 1rem;"></i> Email: </span></h5></th>
                             <td class="p-2"><span class="h6"> juanma0089@hotmail.com</span></td>
                           </tr>
                         </tbody>
@@ -156,31 +156,31 @@
                 </div>
             </div>
             <!-- contiene popover los icon -->
-            <div class="col-12 col-md-6 mb-5">
-                <h4 class="text-center">Intereses</h4>
+            <div class="col-12 col-md-6 mb-5 mostrarScroll noMostrar" id ="intereses">
+                <h4 class="text-center text-light">Intereses</h4>
                 <div class="icons mx-4 mx-md-5 mt-md-4 d-inline-flex">
-                    <div class="intereses text-center">
-                        <div type="button" class="btn p-0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Techno">
-                            <i class="bi bi-music-note-beamed text-light mx-4 mx-md-3"></i>
+                    <div class="intereses text-center text-light" onmouseover="colorChangeText(this)" onmouseout="colorResetText(this)">
+                        <div class="p-0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Techno">
+                            <i class="bi bi-music-note-beamed text-success mx-4 mx-md-3" onmouseover="colorChange(this)" onmouseout="colorReset(this)"></i>
                         </div>
                         <div class="int_data">Música</div>
                     </div>
-                    <div class="intereses text-center">
-                        <button type="button" class="btn p-0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Ultra Fan del Joker">
-                            <i class="bi bi-film text-light mx-4 mx-md-3"></i>
-                        </button>
+                    <div class="intereses text-center text-light" onmouseover="colorChangeText(this)" onmouseout="colorResetText(this)">
+                        <div class="p-0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Ultra Fan del Joker">
+                            <i class="bi bi-film text-success mx-4 mx-md-3"  onmouseover="colorChange(this)" onmouseout="colorReset(this)"></i>
+                        </div>
                         <div class="int_data">Cine</div>
                     </div>
-                    <div class="intereses text-center">
-                        <button type="button" class="btn p-0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Shooters">
-                            <i class="bi bi-controller text-light mx-4 mx-md-3"></i>
-                        </button>
+                    <div class="intereses text-center text-light" onmouseover="colorChangeText(this)" onmouseout="colorResetText(this)">
+                        <div class="p-0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Shooters">
+                            <i class="bi bi-controller text-success mx-4 mx-md-3"  onmouseover="colorChange(this)" onmouseout="colorReset(this)"></i>
+                        </div>
                         <div class="int_data">juegos</div>
                     </div>
-                    <div class="intereses text-center">
-                        <button type="button" class="btn p-0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Viajero del mundo">
-                            <i class="bi bi-airplane text-light mx-4 mx-md-3"></i>
-                        </button>
+                    <div class="intereses text-center text-light" onmouseover="colorChangeText(this)" onmouseout="colorResetText(this)">
+                        <div  class="p-0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Viajero del mundo">
+                            <i class="bi bi-airplane text-success mx-4 mx-md-3"  onmouseover="colorChange(this)" onmouseout="colorReset(this)"></i>
+                        </div>
                         <div class="int_data">Viajar</div>
                     </div>
                 </div>
@@ -188,16 +188,16 @@
         </div>
     </section>
     <!-- seccion formación -->
-    <section class="container align-items-center col-12 p-0" id="formacion">
-        <div class="row bg-light text-center col-lg-12 m-0 p-0 pb-5">
+    <section class="container align-items-center col-12 p-0 paused" >
+        <div class="row bg-dark text-center text-light col-lg-12 m-0 p-0 pb-5" id="formacion">
             <div class="col-12 mt-4 mb-3">
                 <h3>Formación</h3>
             </div>
             <div class="row p-0 mx-0 col-12">
                 <div class="col">
                     <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
-                        <div class="timeline-step">
-                            <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" >
+                        <div class="timeline-step ">
+                            <div class="timeline-content anim-fade-in anim-pause-2" data-toggle="popover" data-trigger="hover" data-placement="top" >
                                 <div class="inner-circle"></div>
                                 <p class="h6 mt-3 mb-1">2000 - 2005</p>
                                 <p class="h6 text-muted mb-0 mb-lg-0"><span"><b>Educación secundaria</b></span></p>
@@ -205,7 +205,7 @@
                             </div>
                         </div>
                         <div class="timeline-step">
-                            <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top">
+                            <div class="timeline-content anim-fade-in anim-pause-3" data-toggle="popover" data-trigger="hover" data-placement="top">
                                 <div class="inner-circle"></div>
                                 <p class="h6 mt-3 mb-1">2005 - 2006</p>
                                 <p class="h6 text-muted mb-0 mb-lg-0"><span><b>Explotación sistemas informáticos</b></span></p>
@@ -213,7 +213,7 @@
                             </div>
                         </div>
                         <div class="timeline-step">
-                            <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top">
+                            <div class="timeline-content anim-fade-in anim-pause-4" data-toggle="popover" data-trigger="hover" data-placement="top">
                                 <div class="inner-circle"></div>
                                 <p class="h6 mt-3 mb-1">2014</p>
                                 <p class="h6 text-muted mb-0 mb-lg-0"><span><b>Acceso Universidad mayores de 25 años</b></span></p>
@@ -221,7 +221,7 @@
                             </div>
                         </div>
                         <div class="timeline-step">
-                            <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top">
+                            <div class="timeline-content anim-fade-in anim-pause-5" data-toggle="popover" data-trigger="hover" data-placement="top">
                                 <div class="inner-circle"></div>
                                 <p class="h6 mt-3 mb-1">2021 - 2023</p>
                                 <p class="h6 text-muted mb-0 mb-lg-0"> <span><b>Técnico Superior en Desarrollo de aplicaciones Web</b></span></p>
@@ -236,8 +236,8 @@
     </section>
     <!-- FIn seccion formación -->
     
-    <section class="container align-items-center col-12 p-0" id="experiencia">
-        <div class="row bg-light text-center col-lg-12 m-0 p-0 pb-5">
+    <section class="container align-items-center col-12 p-0 " id="experiencia">
+        <div class="row bg-dark text-light text-center col-lg-12 m-0 p-0 pb-5">
             <div class="col-12 mt-4 mb-3">
                 <h3>Experiencia</h3>
             </div>
@@ -245,7 +245,7 @@
                 <div class="col">
                     <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
                         <div class="timeline-step">
-                            <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" >
+                            <div class="timeline-content anim-fade-in anim-pause-6" data-toggle="popover" data-trigger="hover" data-placement="top" >
                                 <div class="inner-circle"></div>
                                 <p class="h6 mt-3 mb-1">2009 - Actualidad</p>
                                 <p class="h6 text-muted mb-0 mb-lg-0"><span"><b>Mantenimiento-Reparación equipos informáticos</b></span></p>
@@ -253,7 +253,7 @@
                             </div>
                         </div>
                         <div class="timeline-step">
-                            <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top">
+                            <div class="timeline-content anim-fade-in anim-pause-7" data-toggle="popover" data-trigger="hover" data-placement="top">
                                 <div class="inner-circle"></div>
                                 <p class="h6 mt-3 mb-1">2014 - 2015</p>
                                 <p class="h6 text-muted mb-0 mb-lg-0"><span><b>informática Lanzarote</b></span></p>
@@ -261,7 +261,7 @@
                             </div>
                         </div>
                         <div class="timeline-step">
-                            <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top">
+                            <div class="timeline-content anim-fade-in anim-pause-8" data-toggle="popover" data-trigger="hover" data-placement="top">
                                 <div class="inner-circle"></div>
                                 <p class="h6 mt-3 mb-1">2016 - 2017</p>
                                 <p class="h6 text-muted mb-0 mb-lg-0"> <span><b>LIDL</b></span></p>
@@ -269,7 +269,7 @@
                             </div>
                         </div>
                         <div class="timeline-step">
-                            <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top">
+                            <div class="timeline-content anim-fade-in anim-pause-9" data-toggle="popover" data-trigger="hover" data-placement="top">
                                 <div class="inner-circle"></div>
                                 <p class="h6 mt-3 mb-1">2017 - 2018</p>
                                 <p class="h6 text-muted mb-0 mb-lg-0"> <span><b>Bidafarma</b></span></p>
@@ -277,7 +277,7 @@
                             </div>
                         </div>
                         <div class="timeline-step">
-                            <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top">
+                            <div class="timeline-content anim-fade-in anim-pause-10" data-toggle="popover" data-trigger="hover" data-placement="top">
                                 <div class="inner-circle"></div>
                                 <p class="h6 mt-3 mb-1">2018 - 2019</p>
                                 <p class="h6 text-muted mb-0 mb-lg-0"> <span><b>GM Technology</b></span></p>
@@ -285,7 +285,7 @@
                             </div>
                         </div>
                         <div class="timeline-step">
-                            <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top">
+                            <div class="timeline-content anim-fade-in anim-pause-11" data-toggle="popover" data-trigger="hover" data-placement="top">
                                 <div class="inner-circle"></div>
                                 <p class="h6 mt-3 mb-1">2019 - 2020</p>
                                 <p class="h6 text-muted mb-0 mb-lg-0"> <span><b>Elektro3</b></span></p>
@@ -363,9 +363,9 @@
     </section>
     <footer class="container text-center text-lg-start px-0 bg-dark" id="redes">
 
-        <div class="container d-flex justify-content-center py-5 ">
+        <div class="container d-flex bg-dark justify-content-center py-5 ">
           <a href="https://www.instagram.com/juanma0089/" target="_blank">
-            <button type="button" class="btn btn-dark btn-lg btn-floating mx-2 iconoFooter ">
+            <button type="button" class="btn  btn-dark btn-lg btn-floating mx-2 iconoFooter ">
               <i class="bi bi-instagram"></i>
             </button>
           </a>

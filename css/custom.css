@@ -1,10 +1,13 @@
 body{
     height: 100vw;
-    background-image: url(../img/feather-g7cdbc8b3c_1920.jpg);
+    background-image: url(../img/wallpaperbetter.jpg);
     background-position: center center;
     background-attachment: fixed;
-
+    overflow-x: hidden;
    
+}
+.contenedorFoto{
+    height: 35vw;
 }
 
 #miPerfil{
@@ -54,21 +57,51 @@ body{margin-top:20px;}
     position: relative;
     margin: 1rem
 }
-/* movimiento al inicio text/foto */
+/* mostrar al cargar text/foto */
 .noMostrar{
-    opacity: 0;
-    transition: 0.5s;
+    animation: fadeIn 3.5s;
+    
+}
+@keyframes fadeIn{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
 }
 
 .mostrar{
-    transition: 3.5s;
-    opacity: 1;
-    
+    animation: fadeIn 3.5s;
+   
+}
+
+/* Mostrar al hacer scroll */
+@keyframes anim-fade-in { from { opacity: 0; } to { opacity: 1 } }
+
+.anim-fade-in {
+	animation-duration: 0.5s; /* la animacion dura X segundos */		
+	animation-fill-mode: both; /* aplica estilos de la animacion antes y despues de reproducirla */
+}
+
+.anim-fade-in { animation-name: anim-fade-in; }
+
+.anim-pause-2 { animation-delay: 0.8s; } /* la animacion empieza en 1 seg. */		
+.anim-pause-3 { animation-delay: 1.6s; } /* la animacion empieza en 2 seg. */
+.anim-pause-4 { animation-delay: 2.4s; } /* la animacion empieza en 3 seg. */
+.anim-pause-5 { animation-delay: 3.2s; } /* la animacion empieza en 4 seg. */
+.anim-pause-6 { animation-delay: 4s; } /* la animacion empieza en 1 seg. */		
+.anim-pause-7 { animation-delay: 4.8s; } /* la animacion empieza en 2 seg. */
+.anim-pause-8 { animation-delay: 5.6s; } /* la animacion empieza en 3 seg. */
+.anim-pause-9 { animation-delay: 6.4s; } /* la animacion empieza en 4 seg. */
+.anim-pause-10 { animation-delay: 7.2s; } /* la animacion empieza en 3 seg. */
+.anim-pause-11 { animation-delay: 8s; } /* la animacion empieza en 4 seg. */
+
+/* todas las animaciones pausadas */
+.paused * { 
+	animation-play-state: paused;
+    opacity: 0%;
 }
 
 @media screen and (max-width:1399px) {
     .icons{
-        padding-left: 0px;
+        padding-left: 80px;
     } 
 }
 
@@ -122,7 +155,7 @@ body{margin-top:20px;}
 
 
 
-@media screen and (max-width:820px) {
+@media screen and (max-width:993px) {
     #yo{
         background-image: url(../img/developer-coding-in-php\ -\ copia.jpg);
         background-size: cover;
@@ -135,6 +168,9 @@ body{margin-top:20px;}
   .icons{
     padding-left: 0px;
 }
+.contenedorFoto{
+        height: auto;
+    }
 
 }
 
@@ -142,5 +178,9 @@ body{margin-top:20px;}
 
     .icons{
         padding-left: 0px;
+    }
+
+    .contenedorFoto{
+        height: auto;
     }
 }
