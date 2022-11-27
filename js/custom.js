@@ -46,7 +46,7 @@ function SlideRight() {
     }
   }
 
-  //! evento al hacer scroll 
+  //! evento al hacer scroll y el elemento esté visible
 
   // esta funcion comprueba si un elemento esta visible en pantalla
   function isVisible(elm) {
