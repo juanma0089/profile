@@ -1,113 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Profile</title>
-        <link href="./css/bootstrap.css" rel="stylesheet">
-        <link href="./css/bootstrap.min.css" rel="stylesheet">
-        <link href="./css/custom.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-        <script defer src="./js/bootstrap.bundle.js"></script>
-        <script defer src="./js/custom.js"></script>
-    </head>
-<body class="mt-0" onload="moverTexto()"  >
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile</title>
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <script defer src="./js/bootstrap.bundle.js"></script>
+    <script defer src="./js/custom.js"></script>
+</head>
+
+<body class="mt-0" onload="moverTexto()">
     <!--container menu inicio -->
     <div class="container bg-dark mt-0">
         <header class="row" id="inicio">
             <nav class="navbar navbar-expand-lg  text-light" class="" id="menu">
                 <button class="navbar-toggler ms-2 imagenBoton text-bg-light" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                aria-label="Toggle navigation">
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon "></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo01">
                     <ul class="navbar-nav mx-3">
                         <li class="nav-item "><a href="#miPerfil" class="nav-link text-light">Inicio</a></li>
-                        <li class="nav-item"><a href="#sobreMi" class="nav-link text-light"><span>Sobre mi</span></a></li>
-                        <li class="nav-item"><a href="#formacion" class="nav-link text-light"><span>Formación</span></a></li>
-                        <li class="nav-item"><a href="#experiencia" class="nav-link text-light"><span>Experiencia</span></a></li>
+                        <li class="nav-item"><a href="#sobreMi" class="nav-link text-light"><span>Sobre mi</span></a>
+                        </li>
+                        <li class="nav-item"><a href="#formacion" class="nav-link text-light"><span>Formación</span></a>
+                        </li>
+                        <li class="nav-item"><a href="#experiencia"
+                                class="nav-link text-light"><span>Experiencia</span></a></li>
                         <li class="nav-item"><a href="#skills" class="nav-link text-light"><span>Skills</span></a></li>
-                        <li class="nav-item"><a href="#redes" class="nav-link text-light"><span>Mis redes</span></a></li>
-                        <li class="nav-item"><a href="" class="nav-link text-light" data-bs-toggle="modal" data-bs-target="#exampleModal"><span>Contacto</span></a></li>
+                        <li class="nav-item"><a href="#redes" class="nav-link text-light"><span>Mis redes</span></a>
+                        </li>
+                        <li class="nav-item"><a href="#formulario" class="nav-link text-light"><span>Contacto</span></a></li>
                     </ul>
                 </div>
             </nav>
-        </header>   
+        </header>
     </div>
     <!-- fin container menu inicio -->
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Contacto</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body p-4">
-                            <form>
-                                <!-- Name input -->
-                                <div class="form-outline mb-4">
-                                    <input type="text" id="nameForm" class="form-control" required/>
-                                    <label class="form-label" for="nameForm">Nombre</label>
-                                </div>
-            
-                                <!-- textarea input -->
-                                <div class="form-outline mb-4">
-                                    <textarea id="textareaForm" rows="4" class="form-control" required></textarea>
-                                    <label class="form-label" for="textareaForm">Motivo del contacto</label>
-                                </div>
-                                
-                                <!-- Email input -->
-                                <div class="form-outline mb-4">
-                                    <input type="email" id="emailForm" class="form-control" required/>
-                                    <label class="form-label" for="emailForm">Email</label>
-                                </div>
-            
-                                <!-- Telefono input -->
-                                <div class="form-outline mb-4">
-                                    <input type="tel" id="telForm" class="form-control" required/>
-                                    <label class="form-label" for="telForm">Teléfono</label>
-                                </div>
-                
-                                <!-- Submit button -->
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-primary btn-block">Send</button>
-                                </div>
-                                
-                            </form>
-                        </div>
-                        <div class="modal-footer justify-content-center">
-                            <!-- alert -->
-                            <div class="alert alert-danger d-flex align-items-center" role="alert">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
-                                  <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                                </svg>
-                                <div>
-                                  El formulario no está activo acutualmente
-                                </div>
-                              </div>
+    <!-- Modals -->
+    <!-- modal musica -->
+    <div class="modal " tabindex="-1" id="modalMusica">
+        <div class="modal-dialog ">
+            <div
+                class="modal-content justify-content-center align-content-center align-items-center bg-dark text-light">
+                <div class="modal-header">
+                    <h2 class="modal-title">Mi canción favorita</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body ">
+                    <div class="card bg-dark border-0" style="width:18rem;">
+                        <div class="card-body p-0">
+                            <iframe src="https://open.spotify.com/embed?uri=spotify:track:6R84ZlQF7gGkPB6o3GLZXB"
+                                class="rounded" width="286" height="386" frameborder="0" allowtransparency="true"
+                                allow="encrypted-media"></iframe>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Modal -->
-
-    <!-- foto y descripción -->
-    
-    <section class="container  align-items-center align-content-center justify-content-center p-0" id="miPerfil">
-        <div class="sombreado">
-        <div class="row vh-50 text-center m-0 col-12 align-items-center p-md-5 contenedorFoto ">
-            <div class="col-12 col-md-6 pt-5 pt-md-0 text-light mb-5 mt-md-5 noMostrar " id="presentacion">
-                <h1>Hola, Soy Juanma</h1>
-                <h3>Futuro desarrollador web</h3>
-                <h2>Full stack</h2>
-            </div>
-            <div class="col-12 col-md-6 pt-5 pt-md-0 mx-0 mb-5 mt-md-5 fondo align-items-center transform_right noMostrar" id="foto">
-                <img class="col-5 col-md-5  img-fluid" id="fotoPerfil" src="./img/playa.JPEG" alt="fotoperfil">
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
-       </div> 
+    </div>
+
+    <!-- Modals -->
+
+    <!-- foto y descripción -->
+
+    <section class="container  align-items-center align-content-center justify-content-center p-0" id="miPerfil">
+        <div class="sombreado">
+            <div class="row vh-50 text-center m-0 col-12 align-items-center p-md-5 contenedorFoto ">
+                <div class="col-12 col-md-6 pt-5 pt-md-0 text-light mb-5 mt-md-5 noMostrar " id="presentacion">
+                    <h1>Hola, Soy Juanma</h1>
+                    <h3>Futuro desarrollador web</h3>
+                    <h2>Full stack</h2>
+                </div>
+                <div class="col-12 col-md-6 pt-5 pt-md-0 mx-0 mb-5 mt-md-5 fondo align-items-center transform_right noMostrar"
+                    id="foto">
+                    <img class="col-5 col-md-5  img-fluid" id="fotoPerfil" src="./img/playa.JPEG" alt="fotoperfil">
+                </div>
+            </div>
+        </div>
     </section>
 
     <!--Fin foto y descripción -->
@@ -115,15 +93,17 @@
     <!-- sección sobre mi -->
     <section class="container align-items-center text-light" id="sobreMi">
         <div class="row  vh-50 text-center">
-            
-            <div class="col-10 col-md-6 mx-auto mt-4 mb-4 noMostrar" >
+
+            <div class="col-10 col-md-6 mx-auto mt-4 mb-4 noMostrar">
                 <h3>Sobre mi</h3>
-                <p class=" mt-1 " > Soy una persona emprendedora, muy resolutiva, que adora los retos y 
-                    no se rinde fácilmente. Muy detallista, autodidacta cada día, nunca dejo de aprender 
-                    y tengo un especial don de gente que me ayuda a trabajar en equipo. Mi objetivo principal 
-                    es desarrollarme profesionalmente y evolucionar, de modo que busco oportunidades que me permitan hacerlo. 
-                    Muy organizado, capaz de adaptarme a cualquier circunstancia y 
-                    con ganas de trabajar. A nivel personal soy un entusiasta de las nuevas tecnologías y la informática.</p>
+                <p class=" mt-1 "> Soy una persona emprendedora, muy resolutiva, que adora los retos y
+                    no se rinde fácilmente. Muy detallista, autodidacta cada día, nunca dejo de aprender
+                    y tengo un especial don de gente que me ayuda a trabajar en equipo. Mi objetivo principal
+                    es desarrollarme profesionalmente y evolucionar, de modo que busco oportunidades que me permitan
+                    hacerlo.
+                    Muy organizado, capaz de adaptarme a cualquier circunstancia y
+                    con ganas de trabajar. A nivel personal soy un entusiasta de las nuevas tecnologías y la
+                    informática.</p>
             </div>
         </div>
     </section>
@@ -133,53 +113,78 @@
     <section class="container  align-items-center p-0 pt-4" id="dPersonales">
         <div class="row col-12 mx-0 p-0 noMostrar">
             <div class="col-12 col-md-6 text-light">
-                <h4 class="text-center ">Datos personales</h4>
+                <h3 class="text-center ">Datos personales</h3>
                 <div id="tablaDatos" class="mx-0">
                     <table class="table table-borderless text-light ms-0 ms-md-5">
                         <tbody>
-                          <tr>
-                            <th scope="row" class="text-end p-2"><h5 class="m-0"><span class="badge rounded-pill bg-success text-end"></i><i class="bi bi-person-circle" style="font-size: 1rem;"></i> Nombre: </span></h5></th>
-                            <td class="p-2"><span class="h6"> Juan Manuel Romalde Marín</span></td>
-                            
-                          </tr>
-                          <tr>
-                            <th scope="row" class="text-end p-2"><h5 class="m-0"><span class="badge rounded-pill bg-success"><i class="bi  bi-telephone" style="font-size: 1rem;"></i> Teléfono: </span></h5></th>
-                            <td class="p-2"><span class="h6"> +34 679-67-31-93</span></td>
-                            
-                          </tr>
-                          <tr>
-                            <th scope="row" class="text-end p-2 "><h5 class="m-0"><span class="badge rounded-pill bg-success"><i class="bi bi-envelope-at"  style="font-size: 1rem;"></i> Email: </span></h5></th>
-                            <td class="p-2"><span class="h6"> juanma0089@hotmail.com</span></td>
-                          </tr>
+                            <tr>
+                                <th scope="row" class="text-end p-2">
+                                    <h5 class="m-0"><span class="badge rounded-pill bg-success text-end"></i><i
+                                                class="bi bi-person-circle" style="font-size: 1rem;"></i> Nombre:
+                                        </span></h5>
+                                </th>
+                                <td class="p-2"><span class="h6"> Juan Manuel Romalde Marín</span></td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-end p-2">
+                                    <h5 class="m-0"><span class="badge rounded-pill bg-success"><i
+                                                class="bi  bi-telephone" style="font-size: 1rem;"></i> Teléfono: </span>
+                                    </h5>
+                                </th>
+                                <td class="p-2"><span class="h6"> +34 679-67-31-93</span></td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-end p-2 ">
+                                    <h5 class="m-0"><span class="badge rounded-pill bg-success"><i
+                                                class="bi bi-envelope-at" style="font-size: 1rem;"></i> Email: </span>
+                                    </h5>
+                                </th>
+                                <td class="p-2"><span class="h6"> juanma0089@hotmail.com</span></td>
+                            </tr>
                         </tbody>
-                      </table>
+                    </table>
                 </div>
             </div>
             <!-- contiene popover los icon -->
-            <div class="col-12 col-md-6 mb-5 mostrarScroll noMostrar" id ="intereses">
-                <h4 class="text-center text-light">Intereses</h4>
+            <div class="col-12 col-md-6 mb-5 mostrarScroll noMostrar" id="intereses">
+                <h3 class="text-center mt-4 text-light">Intereses</h3>
                 <div class="icons mx-4 mx-md-5 mt-md-4 d-inline-flex">
-                    <div class="intereses text-center text-light" onmouseover="colorChangeText(this)" onmouseout="colorResetText(this)">
-                        <div class="p-0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Techno">
-                            <i class="bi bi-music-note-beamed text-success mx-4 mx-md-3" onmouseover="colorChange(this)" onmouseout="colorReset(this)"></i>
-                        </div>
+                    <div class="intereses text-center text-light" onmouseover="colorChangeText(this)"
+                        onmouseout="colorResetText(this)">
+                        <button class="btn p-0" data-bs-toggle="modal" data-bs-target="#modalMusica"
+                            data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus"
+                            data-bs-placement="top" data-bs-content="Techno/Future/EDM">
+                            <i class="bi bi-music-note-beamed text-success mx-4 mx-md-3" onmouseover="colorChange(this)"
+                                onmouseout="colorReset(this)"></i>
+                        </button>
                         <div class="int_data">Música</div>
                     </div>
-                    <div class="intereses text-center text-light" onmouseover="colorChangeText(this)" onmouseout="colorResetText(this)">
-                        <div class="p-0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Ultra Fan del Joker">
-                            <i class="bi bi-film text-success mx-4 mx-md-3"  onmouseover="colorChange(this)" onmouseout="colorReset(this)"></i>
+                    <div class="intereses text-center text-light" onmouseover="colorChangeText(this)"
+                        onmouseout="colorResetText(this)">
+                        <div class="p-0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus"
+                            data-bs-placement="top" data-bs-content="Universo Marvel">
+                            <i class="bi bi-film text-success mx-4 mx-md-3" onmouseover="colorChange(this)"
+                                onmouseout="colorReset(this)"></i>
                         </div>
                         <div class="int_data">Cine</div>
                     </div>
-                    <div class="intereses text-center text-light" onmouseover="colorChangeText(this)" onmouseout="colorResetText(this)">
-                        <div class="p-0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Shooters">
-                            <i class="bi bi-controller text-success mx-4 mx-md-3"  onmouseover="colorChange(this)" onmouseout="colorReset(this)"></i>
+                    <div class="intereses text-center text-light" onmouseover="colorChangeText(this)"
+                        onmouseout="colorResetText(this)">
+                        <div class="p-0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus"
+                            data-bs-placement="top" data-bs-content="Shooters">
+                            <i class="bi bi-controller text-success mx-4 mx-md-3" onmouseover="colorChange(this)"
+                                onmouseout="colorReset(this)"></i>
                         </div>
                         <div class="int_data">juegos</div>
                     </div>
-                    <div class="intereses text-center text-light" onmouseover="colorChangeText(this)" onmouseout="colorResetText(this)">
-                        <div  class="p-0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Viajero del mundo">
-                            <i class="bi bi-airplane text-success mx-4 mx-md-3"  onmouseover="colorChange(this)" onmouseout="colorReset(this)"></i>
+                    <div class="intereses text-center text-light" onmouseover="colorChangeText(this)"
+                        onmouseout="colorResetText(this)">
+                        <div class="p-0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus"
+                            data-bs-placement="top" data-bs-content="Viajero del mundo">
+                            <i class="bi bi-airplane text-success mx-4 mx-md-3" onmouseover="colorChange(this)"
+                                onmouseout="colorReset(this)"></i>
                         </div>
                         <div class="int_data">Viajar</div>
                     </div>
@@ -187,45 +192,54 @@
             </div>
         </div>
     </section>
-    
+
     <!-- seccion formación -->
-    <section class="container align-items-center col-12 p-0 paused" >
-        <div class="row bg-dark text-center text-light col-lg-12 m-0 p-0 pb-5" id="formacion">
+    <section class="container align-items-center col-12 p-0 ">
+        <div class="row bg-dark text-center text-light col-lg-12 m-0 p-0 pb-5 paused" id="formacion">
             <div class="col-12 mt-4 mb-3">
-                <h3>Formación</h3>
+                <h2>Formación</h2>
             </div>
             <div class="row p-0 mx-0 col-12">
                 <div class="col">
                     <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
                         <div class="timeline-step ">
-                            <div class="timeline-content anim-fade-in anim-pause-2" data-toggle="popover" data-trigger="hover" data-placement="top" >
+                            <div class="timeline-content anim-fade-in anim-pause-2" data-toggle="popover"
+                                data-trigger="hover" data-placement="top">
                                 <div class="inner-circle"></div>
                                 <p class="h6 mt-3 mb-1">2000 - 2005</p>
-                                <p class="h6 text-muted mb-0 mb-lg-0"><span"><b>Educación secundaria</b></span></p>
+                                <p class="h6 text-muted mb-0 mb-lg-0">
+                                    <span"><b>Educación secundaria</b></span>
+                                </p>
                                 <span>I.E.S Cantely - (Dos Hermanas)</span>
                             </div>
                         </div>
                         <div class="timeline-step">
-                            <div class="timeline-content anim-fade-in anim-pause-3" data-toggle="popover" data-trigger="hover" data-placement="top">
+                            <div class="timeline-content anim-fade-in anim-pause-3" data-toggle="popover"
+                                data-trigger="hover" data-placement="top">
                                 <div class="inner-circle"></div>
                                 <p class="h6 mt-3 mb-1">2005 - 2006</p>
-                                <p class="h6 text-muted mb-0 mb-lg-0"><span><b>Explotación sistemas informáticos</b></span></p>
+                                <p class="h6 text-muted mb-0 mb-lg-0"><span><b>Explotación sistemas
+                                            informáticos</b></span></p>
                                 <span>Primer curso en el IES Gonzalo Nazareno - (Dos Hermanas)</span>
                             </div>
                         </div>
                         <div class="timeline-step">
-                            <div class="timeline-content anim-fade-in anim-pause-4" data-toggle="popover" data-trigger="hover" data-placement="top">
+                            <div class="timeline-content anim-fade-in anim-pause-4" data-toggle="popover"
+                                data-trigger="hover" data-placement="top">
                                 <div class="inner-circle"></div>
                                 <p class="h6 mt-3 mb-1">2014</p>
-                                <p class="h6 text-muted mb-0 mb-lg-0"><span><b>Acceso Universidad mayores de 25 años</b></span></p>
+                                <p class="h6 text-muted mb-0 mb-lg-0"><span><b>Acceso Universidad mayores de 25
+                                            años</b></span></p>
                                 <span>Universidad popular - (Dos Hermanas)</span>
                             </div>
                         </div>
                         <div class="timeline-step">
-                            <div class="timeline-content anim-fade-in anim-pause-5" data-toggle="popover" data-trigger="hover" data-placement="top">
+                            <div class="timeline-content anim-fade-in anim-pause-5" data-toggle="popover"
+                                data-trigger="hover" data-placement="top">
                                 <div class="inner-circle"></div>
                                 <p class="h6 mt-3 mb-1">2021 - 2023</p>
-                                <p class="h6 text-muted mb-0 mb-lg-0"> <span><b>Técnico Superior en Desarrollo de aplicaciones Web</b></span></p>
+                                <p class="h6 text-muted mb-0 mb-lg-0"> <span><b>Técnico Superior en Desarrollo de
+                                            aplicaciones Web</b></span></p>
                                 <span>Ilerna - (Sevilla)</span>
                             </div>
                         </div>
@@ -233,28 +247,32 @@
                 </div>
             </div>
         </div>
-        
+
     </section>
     <!-- FIn seccion formación -->
-    
-    <section class="container align-items-center col-12 p-0  paused" id="experiencia">
-        <div class="row bg-dark text-light text-center col-lg-12 m-0 p-0 pb-5">
+
+    <section class="container align-items-center col-12 p-0 " id="experiencia">
+        <div class="row bg-dark text-light text-center col-lg-12 m-0 p-0 pb-5 paused">
             <div class="col-12 mt-4 mb-3">
-                <h3>Experiencia</h3>
+                <h2>Experiencia</h2>
             </div>
             <div class="row p-0 mx-0 col-12">
                 <div class="col">
                     <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
                         <div class="timeline-step">
-                            <div class="timeline-content anim-fade-in anim-pause-6" data-toggle="popover" data-trigger="hover" data-placement="top" >
+                            <div class="timeline-content anim-fade-in anim-pause-6" data-toggle="popover"
+                                data-trigger="hover" data-placement="top">
                                 <div class="inner-circle"></div>
                                 <p class="h6 mt-3 mb-1">2009 - Actualidad</p>
-                                <p class="h6 text-muted mb-0 mb-lg-0"><span"><b>Mantenimiento-Reparación equipos informáticos</b></span></p>
+                                <p class="h6 text-muted mb-0 mb-lg-0">
+                                    <span"><b>Mantenimiento-Reparación equipos informáticos</b></span>
+                                </p>
                                 <span>mantenimiento y reparación de equipos informáticos</span>
                             </div>
                         </div>
                         <div class="timeline-step">
-                            <div class="timeline-content anim-fade-in anim-pause-7" data-toggle="popover" data-trigger="hover" data-placement="top">
+                            <div class="timeline-content anim-fade-in anim-pause-7" data-toggle="popover"
+                                data-trigger="hover" data-placement="top">
                                 <div class="inner-circle"></div>
                                 <p class="h6 mt-3 mb-1">2014 - 2015</p>
                                 <p class="h6 text-muted mb-0 mb-lg-0"><span><b>informática Lanzarote</b></span></p>
@@ -262,7 +280,8 @@
                             </div>
                         </div>
                         <div class="timeline-step">
-                            <div class="timeline-content anim-fade-in anim-pause-8" data-toggle="popover" data-trigger="hover" data-placement="top">
+                            <div class="timeline-content anim-fade-in anim-pause-8" data-toggle="popover"
+                                data-trigger="hover" data-placement="top">
                                 <div class="inner-circle"></div>
                                 <p class="h6 mt-3 mb-1">2016 - 2017</p>
                                 <p class="h6 text-muted mb-0 mb-lg-0"> <span><b>LIDL</b></span></p>
@@ -270,27 +289,33 @@
                             </div>
                         </div>
                         <div class="timeline-step">
-                            <div class="timeline-content anim-fade-in anim-pause-9" data-toggle="popover" data-trigger="hover" data-placement="top">
+                            <div class="timeline-content anim-fade-in anim-pause-9" data-toggle="popover"
+                                data-trigger="hover" data-placement="top">
                                 <div class="inner-circle"></div>
                                 <p class="h6 mt-3 mb-1">2017 - 2018</p>
                                 <p class="h6 text-muted mb-0 mb-lg-0"> <span><b>Bidafarma</b></span></p>
-                                <span>Recepción de mercancía y entrada al sistema mediante SAP. (logística farmacéutica)</span>
+                                <span>Recepción de mercancía y entrada al sistema mediante SAP. (logística
+                                    farmacéutica)</span>
                             </div>
                         </div>
                         <div class="timeline-step">
-                            <div class="timeline-content anim-fade-in anim-pause-10" data-toggle="popover" data-trigger="hover" data-placement="top">
+                            <div class="timeline-content anim-fade-in anim-pause-10" data-toggle="popover"
+                                data-trigger="hover" data-placement="top">
                                 <div class="inner-circle"></div>
                                 <p class="h6 mt-3 mb-1">2018 - 2019</p>
                                 <p class="h6 text-muted mb-0 mb-lg-0"> <span><b>GM Technology</b></span></p>
-                                <span>Transporte e instalación de máquinas multifunción, puesta a punto y prueba. Servicio y asesoramiento al cliente.</span>
+                                <span>Transporte e instalación de máquinas multifunción, puesta a punto y prueba.
+                                    Servicio y asesoramiento al cliente.</span>
                             </div>
                         </div>
                         <div class="timeline-step">
-                            <div class="timeline-content anim-fade-in anim-pause-11" data-toggle="popover" data-trigger="hover" data-placement="top">
+                            <div class="timeline-content anim-fade-in anim-pause-11" data-toggle="popover"
+                                data-trigger="hover" data-placement="top">
                                 <div class="inner-circle"></div>
                                 <p class="h6 mt-3 mb-1">2019 - 2020</p>
                                 <p class="h6 text-muted mb-0 mb-lg-0"> <span><b>Elektro3</b></span></p>
-                                <span>Diseño y montaje de expositores de iluminación según necesidades del cliente. Uso de ERP Golden. Mantenimiento general de la nave.</span>
+                                <span>Diseño y montaje de expositores de iluminación según necesidades del cliente. Uso
+                                    de ERP Golden. Mantenimiento general de la nave.</span>
                             </div>
                         </div>
                     </div>
@@ -298,100 +323,154 @@
             </div>
         </div>
         </div>
-        
+
     </section>
 
     <!-- seccion Conocimientos -->
-    <section class="container align-items-center" >
+    <section class="container align-items-center">
         <div class="row text-light" id="conocimiento">
-            
+
             <div class="col-12 text-center text-light mt-4" id="skills">
-                <h3>Skills</h3>
+                <h2>Skills</h2>
             </div>
             <!-- barra progresos -->
             <div class="col-8  mx-auto progreso">
                 <p class="mb-0"><b>HTML</b></p>
                 <div class="progress col-12 text-start " style="height: 24px;">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
+                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
                 </div>
                 <p class="mb-0 mt-2"><b>CSS</b></p>
                 <div class="progress col-12 " style="height: 24px;">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
+                        aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
                 </div>
                 <p class="mb-0 mt-2"><b>Bootstrap 5</b></p>
                 <div class="progress col-12 " style="height: 24px;">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
+                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
                 </div>
                 <p class="mb-0 mt-2"><b>JavaScript</b></p>
                 <div class="progress col-12" style="height: 24px;">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 45%"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
+                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 45%"></div>
                 </div>
                 <p class="mb-0 mt-2"><b>PHP</b></p>
                 <div class="progress col-12  " style="height: 24px;">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
+                        aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%"></div>
                 </div>
                 <p class="mb-0 mt-2"><b>Laravel</b></p>
                 <div class="progress col-12  " style="height: 24px;">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 1%"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
+                        aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 1%"></div>
                 </div>
                 <p class="mb-0 mt-2"><b>MySQL</b></p>
                 <div class="progress col-12 " style="height: 24px;">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
+                        aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
                 </div>
                 <p class="mb-0 mt-2"><b>MongoDB</b></p>
                 <div class="progress col-12 " style="height: 24px;">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 1%"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
+                        aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 1%"></div>
                 </div>
                 <p class="mb-0 mt-2"><b>JAVA</b></p>
                 <div class="progress col-12  " style="height: 24px;">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
+                        aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
                 </div>
                 <p class="mb-0 mt-2"><b>Docker</b></p>
                 <div class="progress col-12  " style="height: 24px;">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 20%"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
+                        aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 20%"></div>
                 </div>
                 <p class="mb-0 mt-2"><b>Git</b></p>
                 <div class="progress col-12 " style="height: 24px;">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
+                        aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%"></div>
                 </div>
                 <p class="mb-0 mt-2"><b>Photoshop</b></p>
-                <div class="progress col-12  mb-5" style="height: 24px;">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
+                <div class="progress col-12 mb-5" style="height: 24px;">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
+                        aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
                 </div>
             </div>
-            
+        </div>
+
+    </section>
+    <!-- formulario de contacto -->
+    <section class="container bg-dark text-light" id="formulario">
+        <div class="col-12">
+            <form class="col-md-5 mx-auto">
+                <div class="text-center pt-5">
+                    <h2>Contacto</h2>
+                </div>
+                <!-- Name input -->
+                <div class="form-outline mb-4 pt-2">
+                    <input type="text" id="nameForm" class="form-control" required />
+                    <label class="form-label" for="nameForm">Nombre</label>
+                </div>
+
+                <!-- textarea input -->
+                <div class="form-outline mb-4">
+                    <textarea id="textareaForm" rows="4" class="form-control" required></textarea>
+                    <label class="form-label" for="textareaForm">Motivo del contacto</label>
+                </div>
+
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                    <input type="email" id="emailForm" class="form-control" required />
+                    <label class="form-label" for="emailForm">Email</label>
+                </div>
+
+                <!-- Telefono input -->
+                <div class="form-outline mb-4">
+                    <input type="tel" id="telForm" class="form-control" required />
+                    <label class="form-label" for="telForm">Teléfono</label>
+                </div>
+
+                <!-- Submit button -->
+                <div class="text-center pb-5" id="liveAlertPlaceholder">
+                    <button type="submit" class="btn btn-success btn-block" id="liveAlertBtn">Enviar</button>
+                </div>
+            </form>
         </div>
     </section>
-    <footer class="container text-center text-lg-start px-0 bg-dark" id="redes">
 
-        <div class="container d-flex bg-dark justify-content-center py-5 ">
-          <a href="https://www.instagram.com/juanma0089/" target="_blank">
-            <button type="button" class="btn  btn-dark btn-lg btn-floating mx-2 iconoFooter ">
-              <i class="bi bi-instagram"></i>
-            </button>
-          </a>
-          <a href="https://www.linkedin.com/in/juan-manuel-romalde-mar%C3%ADn-83a6aa17a/" target="_blank">
-            <button type="button" class="btn btn-dark btn-lg btn-floating mx-2 iconoFooter">
-              <i class="bi bi-linkedin"></i>
-            </button>
-          </a>
-          <a href="https://github.com/juanma0089" target="_blank">
-            <button type="button" class="btn btn-dark btn-lg btn-floating mx-2 iconoFooter">
-              <i class="bi bi-github"></i>
-            </button>
-          </a>
-        </div>
-  
-        <!-- Copyright -->
-        <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-          © 2022 Copyright:
-          <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
-            <img alt="Licencia de Creative Commons" class="img-fluid " style="border-width:0 "
-              src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
-          </a>
+    <!-- Fin formulario de contacto -->
+
+    <footer class="container text-center text-lg-start px-0" id="redes">
+        <div class="redesIcon">
+            <div class="container d-flex justify-content-center bg py-5 redes">
+                <a href="https://www.instagram.com/juanma0089/" target="_blank">
+                    <button type="button" class="btn btn-dark rounded-5 btn-lg btn-floating mx-2 iconoFooter ">
+                        <i class="bi bi-instagram rounded"></i>
+                    </button>
+                </a>
+                <a href="https://www.linkedin.com/in/juan-manuel-romalde-mar%C3%ADn-83a6aa17a/" target="_blank">
+                    <button type="button" class="btn btn-dark rounded-5 btn-lg btn-floating mx-2 iconoFooter">
+                        <i class="bi bi-linkedin"></i>
+                    </button>
+                </a>
+                <a href="https://github.com/juanma0089" target="_blank">
+                    <button type="button" class="btn btn-dark rounded-5 btn-lg btn-floating mx-2 iconoFooter">
+                        <i class="bi bi-github"></i>
+                    </button>
+                </a>
+            </div>
         </div>
         <!-- Copyright -->
-      </footer>
-        
+        <div class="text-center text-white p-3 bg-dark">
+            © 2022 Copyright:
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+                <img alt="Licencia de Creative Commons" class="img-fluid " style="border-width:0 "
+                    src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
+            </a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
 </body>
+
 </html>

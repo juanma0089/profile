@@ -18,7 +18,7 @@ body{
   
 }
 .sombreado{
-      background-color: rgba(38, 43, 51, 0.801);
+      background-color: rgba(47, 49, 53, 0.76);
 
 }
 /* imagen circular */
@@ -32,6 +32,10 @@ body{
 
 #conocimiento{
     background-color: rgb(40, 46, 54);
+
+}
+.redes{
+    background-color:rgb(40, 46, 54);
 
 }
 
@@ -71,6 +75,7 @@ body{margin-top:20px;}
     animation: fadeIn 3.5s;
    
 }
+
 
 /* Mostrar al hacer scroll */
 @keyframes anim-fade-in { from { opacity: 0; } to { opacity: 1 } }
