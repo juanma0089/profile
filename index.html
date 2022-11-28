@@ -68,7 +68,83 @@
         </div>
     </div>
 
-    <!-- Modals -->
+
+    <!-- modal youtube -->
+    <div class="modal " tabindex="-1" id="modalCine">
+        <div class="modal-dialog ">
+            <div
+                class="modal-content justify-content-center align-content-center align-items-center bg-dark text-light">
+                <div class="modal-header">
+                    <h2 class="modal-title">Universo Marvel</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body ">
+                    <div class="card bg-dark border-0" style="width:18rem;">
+                        <div class="card-body p-0">
+                            <iframe width="286" height="386" src="https://www.youtube.com/embed/mbfNNHPrFvY" 
+                            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                            encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal CsGo -->
+    <div class="modal " tabindex="-1" id="modalGame">
+        <div class="modal-dialog ">
+            <div
+                class="modal-content justify-content-center align-content-center align-items-center bg-dark text-light">
+                <div class="modal-header">
+                    <h2 class="modal-title">CS-GO</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body ">
+                    <div class="card bg-dark border-0" style="width:18rem;">
+                        <div class="card-body p-0">
+                            <iframe width="286" height="386" src="https://www.youtube.com/embed/4yH5i3vWumo" 
+                            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+                             clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal Viaje -->
+    <div class="modal " tabindex="-1" id="modalViaje">
+        <div class="modal-dialog ">
+            <div
+                class="modal-content justify-content-center align-content-center align-items-center bg-dark text-light">
+                <div class="modal-header">
+                    <h2 class="modal-title">Algún día</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body ">
+                    <div class="card bg-dark border-0" style="width:18rem;">
+                        <div class="card-body p-0">
+                            <iframe width="286" height="386" src="https://www.youtube.com/embed/sw2l1DPZjZ4" title="YouTube video player" 
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+                             picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modals -->
 
     <!-- foto y descripción -->
 
@@ -153,12 +229,12 @@
                 <div class="icons mx-4 mx-md-5 mt-md-4 d-inline-flex">
                     <div class="intereses text-center text-light" onmouseover="colorChangeText(this)"
                         onmouseout="colorResetText(this)">
-                        <div class="btn p-0" data-bs-container="body"  data-bs-toggle="popover" data-bs-trigger="hover focus" 
-                            data-bs-placement="top" data-bs-content="Techno/Future/EDM" >
+                        <div class="btn p-0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus"
+                            data-bs-placement="top" data-bs-content="Techno/Future/EDM">
                             <i class="bi bi-music-note-beamed text-success mx-4 mx-md-3" onmouseover="colorChange(this)"
                                 onmouseout="colorReset(this)"></i>
                         </div>
-                        <div class="int_data">Música</div>
+                        <div class="int_data" data-bs-toggle="modal" data-bs-target="#modalMusica">Música</div>
                     </div>
                     <div class="intereses text-center text-light" onmouseover="colorChangeText(this)"
                         onmouseout="colorResetText(this)">
@@ -167,7 +243,7 @@
                             <i class="bi bi-film text-success mx-4 mx-md-3" onmouseover="colorChange(this)"
                                 onmouseout="colorReset(this)"></i>
                         </div>
-                        <div class="int_data">Cine</div>
+                        <div class="int_data" data-bs-toggle="modal" data-bs-target="#modalCine">Cine</div>
                     </div>
                     <div class="intereses text-center text-light" onmouseover="colorChangeText(this)"
                         onmouseout="colorResetText(this)">
@@ -176,7 +252,7 @@
                             <i class="bi bi-controller text-success mx-4 mx-md-3" onmouseover="colorChange(this)"
                                 onmouseout="colorReset(this)"></i>
                         </div>
-                        <div class="int_data">juegos</div>
+                        <div class="int_data" data-bs-toggle="modal" data-bs-target="#modalGame">juegos</div>
                     </div>
                     <div class="intereses text-center text-light" onmouseover="colorChangeText(this)"
                         onmouseout="colorResetText(this)">
@@ -185,7 +261,7 @@
                             <i class="bi bi-airplane text-success mx-4 mx-md-3" onmouseover="colorChange(this)"
                                 onmouseout="colorReset(this)"></i>
                         </div>
-                        <div class="int_data">Viajar</div>
+                        <div class="int_data" data-bs-toggle="modal" data-bs-target="#modalViaje">Viajar</div>
                     </div>
                 </div>
             </div>
