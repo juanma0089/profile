@@ -157,7 +157,15 @@ body{margin-top:20px;}
     opacity: .5
 }
 
-
+/* rotar img al hacer clic */
+.rotar{
+    transform: rotate(360deg);
+   -webkit-transform: rotate(360deg);
+   -moz-transform: rotate(360deg); 
+    transition: transform 1s;
+   -webkit-transition: -webkit-transform 2s;
+   -moz-transition: -moz-transform 1s;     
+}
 
 
 @media screen and (max-width:993px) {

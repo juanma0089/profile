@@ -82,7 +82,7 @@
                 </div>
                 <div class="col-12 col-md-6 pt-5 pt-md-0 mx-0 mb-5 mt-md-5 fondo align-items-center transform_right noMostrar"
                     id="foto">
-                    <img class="col-5 col-md-5  img-fluid" id="fotoPerfil" src="./img/playa.JPEG" alt="fotoperfil">
+                    <img class="col-5 col-md-5  img-fluid  bg-transparent" id="fotoPerfil" src="./img/imbCV.png" alt="fotoperfil">
                 </div>
             </div>
         </div>
@@ -153,12 +153,11 @@
                 <div class="icons mx-4 mx-md-5 mt-md-4 d-inline-flex">
                     <div class="intereses text-center text-light" onmouseover="colorChangeText(this)"
                         onmouseout="colorResetText(this)">
-                        <button class="btn p-0" data-bs-toggle="modal" data-bs-target="#modalMusica"
-                            data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus"
-                            data-bs-placement="top" data-bs-content="Techno/Future/EDM">
+                        <div class="btn p-0" data-bs-container="body"  data-bs-toggle="popover" data-bs-trigger="hover focus" 
+                            data-bs-placement="top" data-bs-content="Techno/Future/EDM" >
                             <i class="bi bi-music-note-beamed text-success mx-4 mx-md-3" onmouseover="colorChange(this)"
                                 onmouseout="colorReset(this)"></i>
-                        </button>
+                        </div>
                         <div class="int_data">Música</div>
                     </div>
                     <div class="intereses text-center text-light" onmouseover="colorChangeText(this)"
@@ -247,7 +246,6 @@
                 </div>
             </div>
         </div>
-
     </section>
     <!-- FIn seccion formación -->
 
@@ -402,13 +400,13 @@
     <!-- formulario de contacto -->
     <section class="container bg-dark text-light" id="formulario">
         <div class="col-12">
-            <form class="col-md-5 mx-auto">
+            <form class="col-md-5 mx-auto" id="contacto-frm" onsubmit = "validacion()">
                 <div class="text-center pt-5">
                     <h2>Contacto</h2>
                 </div>
                 <!-- Name input -->
-                <div class="form-outline mb-4 pt-2">
-                    <input type="text" id="nameForm" class="form-control" required />
+                <div class="form-outline mb-4 pt-2" name="fvalida">
+                    <input type="text" id="nameForm" name="nombre" class="form-control" required />
                     <label class="form-label" for="nameForm">Nombre</label>
                 </div>
 
@@ -432,7 +430,7 @@
 
                 <!-- Submit button -->
                 <div class="text-center pb-5" id="liveAlertPlaceholder">
-                    <button type="submit" class="btn btn-success btn-block" id="liveAlertBtn">Enviar</button>
+                    <input type="submit" class="btn btn-success btn-block" id="liveAlertBtn" ></input>
                 </div>
             </form>
         </div>

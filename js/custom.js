@@ -25,27 +25,27 @@ function SlideRight() {
   const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
 
 //* necesario para alert bootstrap
-const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+// const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 
-const alert = (message) => {
-  const wrapper = document.createElement('div')
-  wrapper.innerHTML = [
-    `<div class="alert alert-danger mt-3 alert-dismissible" role="alert">`,
-    `<path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />`,
-    `   <div>${message}</div>`,
-    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-    '</div>'
-  ].join('')
+// const alert = (message) => {
+//   const wrapper = document.createElement('div')
+//   wrapper.innerHTML = [
+//     `<div class="alert alert-danger mt-3 alert-dismissible" role="alert">`,
+//     `<path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />`,
+//     `   <div>${message}</div>`,
+//     '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+//     '</div>'
+//   ].join('')
 
-  alertPlaceholder.append(wrapper)
-}
+//   alertPlaceholder.append(wrapper)
+// }
 
-const alertTrigger = document.getElementById('liveAlertBtn')
-if (alertTrigger) {
-  alertTrigger.addEventListener('click', () => {
-    alert('El formulario no está activo actualmente')
-  })
-}
+// const alertTrigger = document.getElementById('liveAlertBtn')
+// if (alertTrigger) {
+//   alertTrigger.addEventListener('click', () => {
+//     alert('El formulario no está activo actualmente')
+//   })
+// }
 
   //! evento al cargar
 
@@ -131,4 +131,106 @@ if (alertTrigger) {
       x.classList.add('text-success');
     }
 
+  }
+
+  //! evento clic girar foto 
+
+   
+document.getElementById('foto').onclick = function() {rotar()};
+
+function rotar(){
+
+  document.getElementById('foto').classList.add('rotar');
+  
+}
+
+//*He ido haciendo los eventos básicos y alguno un poco más complejo 
+//*aún me queda practicar
+
+//! validar formulario
+
+// function valida_envia(){
+//   //valido el nombre
+//   if (document.fvalida.nombre.value.length==0){
+//        alert("Tiene que escribir su nombre")
+//        document.fvalida.nombre.focus()
+//        return 0;
+//   }
+
+  
+//   //el formulario se envia
+//   alert("Muchas gracias por enviar el formulario");
+//   document.fvalida.submit();
+// }
+
+function validacion() { 
+
+  let nombre = document.getElementById("nameForm").value;
+  let asunto = document.getElementById("textareaForm").value;
+  let email = document.getElementById("emailForm").value;
+  let tlf = document.getElementById("telForm").value;
+
+  alert ("hola");
+
+  let expRegNombre = /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+  let expRegEmail = /^\w+@(\w+\.)+\w{2,4}$/; 
+  let expRegTlf = /^\d{9}$/;
+  
+
+  if(!nombre)
+  {
+   alert("El campo nombre es requerido");
+  
+   return false;
+  }
+  if (!expRegNombre.exec(nombre))
+  {
+     alert("El campo nombre admite letras y espacios.")
+   
+     return false;
+  }
+    // campo asunto
+  if(!asunto)
+  {
+  alert("El campo asunto es requerido");
+  
+  return false;
+  }
+  
+  if(!email)
+  {
+   alert("El campo email es requerido");
+   
+   return false;
+  }
+  if(!expRegEmail.exec(email))
+  {
+    alert("El campo email no tiene el formato correcto.")
+  
+    return false;
+  }
+
+  if(!tlf)
+  {
+   alert("El campo teléfono es requerido");
+
+   return false;
+  }
+
+  if(!expRegTlf.exec(tlf))
+  {
+    alert("El campo teléfono no es válido")
+   
+    return false;
+  }
+
+    return true;
+
+}
+
+window.onload = function(){
+
+    let formulario = document.getElementById("contacto-frm");
+
+    formulario.onsubmit = validacion;
   }
